@@ -13,7 +13,7 @@ for ($len = 1; $len <= $maxLen; $len++) {
     $indexes = array_fill(0, $len, 0);
 
     while (true) {
-        // složení řetězce
+        
         $str = '';
         foreach ($indexes as $i) {
             $str .= $chars[$i];
@@ -29,7 +29,6 @@ for ($len = 1; $len <= $maxLen; $len++) {
 
         if ($attempts >= $maxAttempts) break 2;
 
-        // inkrementace "počítadla"
         for ($pos = $len - 1; $pos >= 0; $pos--) {
             if ($indexes[$pos] < strlen($chars) - 1) {
                 $indexes[$pos]++;
